@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: #efefef;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background: url('../img/living-room-scandinavian-interior-design.jpg') no-repeat center center / cover;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+
+h1 {
+    color: white;
+    font-size: 5rem;
+}
+
+:root {
+    --color-primary: #000;
+    --text-color: #FFF;
+}
+
+.main-nav {
+    background: var(--color-primary);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: left;
+    padding: 0 2rem;
+}
+
+.main-nav__menu {
+    height: 100%;
+    display: flex;
+}
+
+.main-nav ul {
+    list-style:none;
+}
+
+.main-nav__menu-item {
+    font-size: 1.75rem;
+    float: left;
+}
+
+.main-nav a{
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.main-nav__logo {
+    height: 4.5rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+.main-nav__logo img{
+    height: 100%;
+}
+
+.main-nav__search, .main-nav__search form{
+    height: 100%;
+    color: #fff;
+   
+  
+}
+
+.main-nav__search form {
+    display: block;
+    align-items: center;
+    
+}
+
+.main-nav__search input {
+    min-width: 400px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 0.25rem;
+    border-color: white;
+    background-color: transparent;
+   
+}
+
+
+.main-nav__menu-item a:hover {
+    background-color: #343434;
+    color: var(--color-primary);
+}
+
+.main-nav__menu-item a {
+    padding: 0 2rem;
+    display: block;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+.main-nav__submenu {
+    display: none;
+    min-width: 140px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.main-nav__submenu a {
+    padding: 0 2rem;
+    font-weight: lighter;
+    color: var(--color-primary);
+}
+.main-nav__submenu a:hover {
+    color: white;
+}
+
+.main-nav__menu-item:hover .main-nav__submenu{
+    display: block;
+}
+
+input:focus {
+    outline: none;
+}
+
+.productos {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 1rem;
+    width: 100%;
+}
+.producto {
+    flex-basis: 250px; /* width */
+    border-radius: 0.5rem;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.producto-nombre {
+    margin-bottom: 1rem;
+}
+
+.producto-detalle {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.producto-descripcion {
+    color: #757575;
+}
+
+.producto-precio {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.producto footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+    gap: 0.5rem;
+}
+
+.btn {
+    border: none;
+    background-color: #feca52;
+    color: #343434;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #343434;
+    color: #feca52;
+}
+
+.btn-add-cart {
+    flex-grow: 1;
+}
+
+.info-producto {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: white;
+}
+
+.info-producto__card {
+    width: 80%;
+    background-color: #f5f5f5;
+    box-shadow: 0px 1px 4px 2px hsl(0 0% 0% / 25%);
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.info-producto__body {
+    margin: 1rem;
+}
+
+.info-producto__gallery {
+    width: 500px;
+    grid-row: 1 / 3;
+}
+
+.gallery__focus_photo.demo {
+    height: 100%;
+}
+.gallery__focus_photo.demo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.gallery__carousel {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin: 1rem 1rem;
+    overflow-x: auto;
+    padding: 6px;
+}
+
+.gallery__carousel img {
+    height: 6rem;
+}
+
+.gallery__carousel img:last-child {
+    outline: 6px solid #ff5200;
+}
+
+.info-producto__name {
+    font-size: 3rem;
+}
+
+.info-producto__description {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+
+.info-producto__price {
+    font-size: 3rem;
+    text-align: right;
+    color: #ff5200;
+}
+
+.product-discount {
+    display: inline-block;
+    border-radius: 0.5rem;
+    background: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+}
+
+.info-producto__stock {
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.25rem;
+}
+
+.info-producto__footer {
+    grid-column: 2;
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.info-producto__footer .btn {
+    align-self: end;
+    flex-grow: 0;
+}
+
+.titulo_seccion {
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #ff5200;
+    font-weight: 400;
+}
+
+.titulo_seccion h2 {
+    margin: 0 auto;
+    width: 80%;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+
+nav ul.menu-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul.menu-list li, nav a{
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.peliculas{
+    padding: 0 3%;
+}
+
+.peliculas img:hover{
+    transform: scale(1.15);
+}
+
+.container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 20px;
+    width: 100%;
+}
+
+
+.item{
+    height: auto;
+}
+
+.item img{
+    width: 100%;
+}
+
